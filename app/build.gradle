@@ -16,7 +16,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags ""
+                cppFlags "-frtti -fexceptions"
                 abiFilters "armeabi-v7a"
             }
         }
@@ -30,9 +30,9 @@ android {
     }
     externalNativeBuild {
         cmake {
-            path "CMakeLists.txt"
 //            path "src/main/cpp/CMakeLists.txt"
-//            version "3.10.2"
+            //version "3.7.0"
+            path "CMakeLists.txt"
         }
     }
     compileOptions {
